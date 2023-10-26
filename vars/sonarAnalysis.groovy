@@ -15,5 +15,3 @@ def waitGate(time: 5, abortPipeline: false) {
     waitForQualityGate abortPipeline: abortPipeline
   }
 }
-
-
