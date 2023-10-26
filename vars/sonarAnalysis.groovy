@@ -10,7 +10,7 @@ def sonarEnv(String serverName) {
   }
 }
 
-def waitGate(int time: 5, Boolean abortPipeline: false) {
+def waitGate(int time = 5, Boolean abortPipeline = false) {
   timeout(time: time, unit: 'MINUTES') {
     waitForQualityGate abortPipeline: abortPipeline
   }
