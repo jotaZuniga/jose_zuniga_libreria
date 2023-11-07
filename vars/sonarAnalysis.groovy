@@ -6,11 +6,11 @@ def call(String name, String dayOfWeek) {
 
 def sonarEnv(serverName) {
   withSonarQubeEnv(serverName) {
-    sh "echo Server loaded"
+    sh "Ejecución de las pruebas de calidad de código"
   }
 }
 
-def waitGate(time: 5, abortPipeline: false) {
+def waitGate(time: 2, abortPipeline: false) {
   timeout(time: time, unit: 'MINUTES') {
     waitForQualityGate abortPipeline: abortPipeline
   }

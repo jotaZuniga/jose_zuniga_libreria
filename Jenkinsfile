@@ -13,7 +13,7 @@
       stage("Quality Gate") {
         steps {
             script {
-                sonarAnalysis.waitGate(2, true)
+                sonarAnalysis.waitGate(5, true)
             }
         }
       }
